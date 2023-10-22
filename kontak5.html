@@ -1,0 +1,88 @@
+<HTML>
+    <HEAD>
+    <TITLE> Contoh Hyperlink </TITLE>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+    </HEAD>
+    <BODY>
+    <pre>
+    <hr color="blue" size=3 width=50% align="left"><font size= 4 color="red"><a
+    href="home5.html">Home</a>| <a href="about5.html">About</a>| <a href="profil5.html">Profil</a>| <a href="galery5.html">Gallery</a>| <a href="kontak5.html">Kontak</a></font>
+    <hr color="blue" size=3 width=50% align="left">
+    <header>
+        <h1>Hubungi Kami</h1>
+    </header>
+
+    <div class="container">
+        <form action="proses_form.php" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+            <input type="submit" value="Kirim">
+        </form>
+    </div>
+</font>
+</pre>
+</BODY>
+</HTML>
+    

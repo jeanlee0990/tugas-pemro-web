@@ -1,0 +1,177 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+/* Body Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to bottom, #AED2FF, #86A8E7);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navigasi {
+    width: 100%;
+    position: fixed;
+    background-color: #333; 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    padding: 20px;
+}
+
+li > a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+li > a:hover {
+    color: #ff6f61;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    padding: 60px 0;
+    color: #333;
+}
+
+.p1 {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    padding-bottom: 30px;
+    color: #555;
+}
+
+/* Image Styles */
+.gambar {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styles */
+.kartu {
+    margin: 50px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.kartu:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Hobbies Styles */
+.hobi {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Button Styles */
+button.kirim {
+    font-family: "Arial", sans-serif;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.kirim:hover {
+    background-color: #e6493e;
+}
+
+/* Hobby Cards Styles */
+.kartu-hobi {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.kartu-hobi img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.kartu-hobi p {
+    margin-top: 10px;
+}
+
+.kartu-hobi:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Contact Styles */
+.form {
+    text-align: center;
+    padding: 30px 0;
+}
+
+input, textarea {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+textarea {
+    height: 120px;
+}
+
+.form-nama, .form-email, .form-perusahaan, .form-phone, .form-komentar, .form-kirim {
+    margin: 10px 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Arial", sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}

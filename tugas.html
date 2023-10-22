@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Pertemuan dan Latihan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .pertemuan {
+            cursor: pointer;
+        }
+
+        .list-item {
+            display: none;
+        }
+
+        .pertemuan.active + .list-item {
+            display: block;
+        }
+
+        .back-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="back-button" href="/index.html">Back</a>
+        <h1>Daftar Pertemuan dan Latihan</h1>
+    </header>
+
+    <div class="container">
+        <ul>
+            <li class="pertemuan">Pertemuan 2 :</li>
+            <ul class="list-item">
+                <li><a href="latihan21.html">latihan1</a></li>
+                <li><a href="latihan22.html">latihan2</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 3 :</li>
+            <ul class="list-item">
+                <li><a href="latihan31.html">latihan1</a></li>
+                <li><a href="latihan32.html">latihan2</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 4 :</li>
+            <ul class="list-item">
+                <li><a href="pertemuan4.html">Tugas</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 5 :</li>
+            <ul class="list-item">
+                <li><a href="home5.html">Tugas</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 6 :</li>
+            <ul class="list-item">
+                <li><a href="latihan61.html">Latihan1</a></li>
+                <li><a href="latihan62.html">Latihan2</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 7 :</li>
+            <ul class="list-item">
+                <li><a href="latihan71.html">latihan1</a></li>
+                <li><a href="latihan72.html">latihan2</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 8 :</li>
+            <ul class="list-item">
+                <li><a href="latihan81.html">Tugas</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 9 :</li>
+            <ul class="list-item">
+                <li><a href="index9.html">Tugas</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 10 :</li>
+            <ul class="list-item">
+                <li><a href="iframe.html">Tugas</a></li>
+            </ul>
+            <li class="pertemuan">Pertemuan 11 :</li>
+            <ul class="list-item">
+                <li><a href="index11.html">Tugas</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <script>
+        const pertemuanElements = document.querySelectorAll('.pertemuan');
+
+        pertemuanElements.forEach((element) => {
+            element.addEventListener('click', () => {
+                element.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

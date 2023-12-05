@@ -1,0 +1,46 @@
+body {
+    color: #80c0c0;
+    background: black;
+}
+
+#header {
+    background: #000080;
+    padding: 20px;
+    text-align: center;
+}
+
+#navigation {
+    background: #000080;
+    padding: 10px;
+}
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigation li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.main {
+    width: 70%;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+#footer {
+    background: #000080;
+    padding: 10px;
+    text-align: center;
+}

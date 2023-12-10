@@ -176,10 +176,15 @@
     <!--Section description-->
 
     <div class="row">
+      
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5 mx-auto">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+            <strong>Terima kasih</strong> pesan anda sudah kami terima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+            <form id="portofolio-contact-form" name='portofolio-contact-form' action="" method="POST">
 
                 <!--Grid row-->
                 <div class="row">
@@ -187,7 +192,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="nama" class="form-control">
                             <label for="name" class="">Nama</label>
                         </div>
                     </div>
@@ -223,7 +228,7 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2"
+                            <textarea type="text" id="message" name="komentar" rows="2"
                                 class="form-control md-textarea"></textarea>
                             <label for="message">Komentar</label>
                         </div>
@@ -231,14 +236,15 @@
                     </div>
                 </div>
                 <!--Grid row-->
+            <button type="submit" class="btn btn-primary btn-kirim">Send</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </button>
 
             </form>
 
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-            </div>
-            <div class="status"></div>
-        </div>
+            
         <!--Grid column-->
 
         <!--Grid column-->
@@ -393,6 +399,34 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxCySeOcPjcDcBuvPSJuDqbOc9M7Hh3V6qDLCTPrV7n18xjH0C8kRgNxT8ubiclOg4w/exec'
+  const form = document.forms['portofolio-contact-form']
+  const btnKirim = document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector('.btn-loading');
+  const myAlert = document.querySelector('.my-alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    //ketika tombol submit di klik
+    // tampilkan tombol loading, hilangkan tombol kirim
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        //tampilkan tombol kirim, hilangkan tombol loading
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        //tampilkan alert
+        myAlert.classList.toggle('d-none');
+        //reset form
+        form.reset();
+        console.log('Success!', response)
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 </body>
 </html>
